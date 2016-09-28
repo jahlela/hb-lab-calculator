@@ -31,13 +31,3 @@ def power(num1, num2):
 def mod(num1, num2):
 	"""Returns the remainder when the first input is divided by the second input"""
 	return num1 % num2
-	
-
-print add(4,5)
-print subtract(56,9)
-print multiply(2,70)
-print divide(5,4)
-print square(5)
-print cube(5)
-print power(5,4)
-print mod(5,1)
