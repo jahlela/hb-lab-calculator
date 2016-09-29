@@ -16,11 +16,29 @@ print "For each arithmetic statement, please start with the operator. Enter q at
 #write a function to determine length of the input and repeats the operation n-2 times
 
 
+
+
+def intifier(tokens):
+	token_values = tokens[1:]
+	token_int = []
+	for each in token_values:
+		each = int(each)
+		token_int.append(each)
+		print token_int
+
+
+	token_int.insert(0,tokens[0])
+	return token_int
+
+
+
 #create a while loop
 while True:
 	#Prompt the user for an arithmetic function and save input 
-	input=raw_input("Enter a statement > ")
-	tokens=input.split(" ")
+	input = raw_input("Enter a statement > ")
+	tokens_input = input.split(" ")
+	tokens = intifier(tokens_input)
+
 
 	if tokens[0] == "q":
 		break
@@ -40,3 +58,5 @@ while True:
 		print power(int(tokens[1]), int(tokens[2]))
 	elif tokens[0] == "%":
 		print mod(int(tokens[1]), int(tokens[2]))
+
+
