@@ -19,17 +19,20 @@ print "For each arithmetic statement, please start with the operator. Enter q at
 
 
 def intifier(tokens):
+	""" Takes a list of strings and converts all but the first to integers """
+
+	#removes operator from list
 	token_values = tokens[1:]
 	token_int = []
+
+	#change each string to an integer
 	for each in token_values:
 		each = int(each)
 		token_int.append(each)
-		print token_int
 
-
+	#add back the operator
 	token_int.insert(0,tokens[0])
 	return token_int
-
 
 
 #create a while loop
@@ -39,7 +42,7 @@ while True:
 	tokens_input = input.split(" ")
 	tokens = intifier(tokens_input)
 
-
+	#Checks operator and calls arithmetic function accordingly
 	if tokens[0] == "q":
 		break
 	elif tokens[0] == "+":
