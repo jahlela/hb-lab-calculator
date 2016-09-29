@@ -21,17 +21,14 @@ print "For each arithmetic statement, please start with the operator. Enter q at
 def intifier(tokens):
 	""" Takes a list of strings and converts all but the first to integers """
 
-	#removes operator from list
-	token_values = tokens[1:]
-	token_int = []
+	#starts off list with operator
+	token_int = [tokens[0]]
 
-	#change each string to an integer
-	for each in token_values:
+	#change each stringy number to an integer and add it to token_int
+	for each in tokens[1:]:
 		each = int(each)
 		token_int.append(each)
 
-	#add back the operator
-	token_int.insert(0,tokens[0])
 	return token_int
 
 
