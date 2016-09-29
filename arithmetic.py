@@ -1,33 +1,41 @@
-def add(num1, num2):
+from functools import reduce
+
+def add(int_list):
     """ Returns the sum of the inputs"""
-    
-    return num1 + num2
+    total = reduce((lambda x, y: x+y), int_list)
+    return total
 
-def subtract(num1, num2):
+def subtract(int_list):
 	"""Returns the result of subtracting the second number from the first"""
-	return num1 - num2
+	total = reduce((lambda x, y: x-y), int_list)
+	return total
 
-def multiply(num1, num2):
+def multiply(int_list):
 	"""Returns the product of the inputs"""
-	return num1 * num2
+	total = reduce((lambda x, y: x*y), int_list)
+	return total
 
-def divide(num1, num2):	
+def divide(int_list):	
 	"""Divides the first input by the second, returning a floating point number"""
-	return float(num1) / num2
+	total = reduce((lambda x, y: x/y), int_list)
+	return total
 
-def square(num1):
+def square(int_list):
 	"""Returns the square of the input"""
-	return num1 ** 2
-	
+	total =  int_list**2
+	return total
 
-def cube(num1):
+def cube(int_list):
 	"""Returns the cube of the input"""
-	return num1 ** 3
+	total =  int_list**3
+	return total
 
-def power(num1, num2):
+def power(int_list):
 	"""Returns the result of raising the first input to the power of the second input"""
-	return num1 ** num2
+	total = reduce((lambda x, y: x**y), int_list)
+	return total
 
-def mod(num1, num2):
+def mod(int_list):
 	"""Returns the remainder when the first input is divided by the second input"""
-	return num1 % num2
+	total = reduce((lambda x, y: x%y), int_list)
+	return total

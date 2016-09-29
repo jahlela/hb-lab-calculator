@@ -14,10 +14,6 @@ from arithmetic import *
 print "For each arithmetic statement, please start with the operator. Enter q at any time to quit. "
 
 #write a function to determine length of the input and repeats the operation n-2 times
-
-
-
-
 def intifier(tokens):
 	""" Returns a list of an operator and integers.
 
@@ -45,20 +41,20 @@ while True:
 	if tokens[0] == "q" or tokens[0] == "quit":
 		break
 	elif tokens[0] == "+":
-		print add(tokens[1], tokens[2])
+		print add(tokens[1:])
 	elif tokens[0] == "-":
-		print subtract(tokens[1], tokens[2])
+		print subtract(tokens[1:])
 	elif tokens[0] == "*":
-		print multiply(tokens[1], tokens[2])
+		print multiply(tokens[1:])
 	elif tokens[0] == "/":
-		print divide(tokens[1], tokens[2])
+		print divide(tokens[1:])
 	elif tokens[0] == "square":
 		print square(tokens[1])
 	elif tokens[0] == "cube":
 		print cube(tokens[1])
 	elif tokens[0] == "power":
-		print power(tokens[1], tokens[2])
+		print power(tokens[1:])
 	elif tokens[0] == "mod":
-		print mod(tokens[1], tokens[2])
+		print mod(tokens[1:])
 
 
