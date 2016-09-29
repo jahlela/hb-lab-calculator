@@ -52,13 +52,13 @@ while True:
 		print multiply(tokens[1], tokens[2])
 	elif tokens[0] == "/":
 		print divide(tokens[1], tokens[2])
-	elif tokens[0] == "**2":
+	elif tokens[0] == "square":
 		print square(tokens[1])
-	elif tokens[0] == "**3":
+	elif tokens[0] == "cube":
 		print cube(tokens[1])
-	elif tokens[0] == "**":
+	elif tokens[0] == "power":
 		print power(tokens[1], tokens[2])
-	elif tokens[0] == "%":
+	elif tokens[0] == "mod":
 		print mod(tokens[1], tokens[2])
 
 
